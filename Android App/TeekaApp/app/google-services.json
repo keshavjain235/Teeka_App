@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "563212442644",
+    "firebase_url": "https://teeka-app-4e89e.firebaseio.com",
+    "project_id": "teeka-app-4e89e",
+    "storage_bucket": "teeka-app-4e89e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563212442644:android:36290d705edb64067c9b01",
+        "android_client_info": {
+          "package_name": "com.example.teekaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563212442644-00qoi3pp1o4lpfduuit3raeurqdoe0qq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.teekaapp",
+            "certificate_hash": "fb70afd6081e8a1180c2eb8bb2cd8e0faba5f055"
+          }
+        },
+        {
+          "client_id": "563212442644-2q9ig107jo72du0a7onvckie0oar1k7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWJyV4ikaTWYUW-lWoo2e5Xx1VQaQhBpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563212442644-2q9ig107jo72du0a7onvckie0oar1k7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    body{ 
+      background-image :url(Vac1.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      font-family:new time roman;
+    }
+    h1{
+      font-size: 50px;
+      color:white;
+      margin-top: 30px;
+      margin-bottom:60px;
+
+    }
+    h2{
+      font-size: 30px;
+      color:white;
+      margin-top: 30px;
+      margin-bottom:60px;
+
+    }
+
+    .col-md-5{
+      background: rgba(0,0,0,0.5);
+      margin-top: 40px;
+    }
+    .label{
+      font-size:20px;
+      font-weight: normal;
+    }
+    .input-group{
+      margin-top:10px;
+      margin-bottom: 20px; 
+    }
+    .input-group-addon{
+      background:transparent;
+      border-radius: 0px;
+      border:0px;
+      border-bottom:1px solid white;
+      font-size:18px;
+      color:grey; 
+    }
+    .form-control{
+      background:transparent;
+      border-radius: 0px;
+      border:0px;
+      border-bottom:1px solid white;
+      padding :15px;
+      color:white;
+      font-size:21px;
+    }
+    input[type="checkbox"]{
+      height:15px;
+      width:15px;
+    }
+    p{
+      font-size:18px;
+      color:white;
+      text-align: center;
+    }
+    small{
+      font-size: 18px;
+      color:white;
+    }
+    .btn-success{
+      border-radius: 0px;
+      width: 550px;
+      font-size:20px;
+      margin-top:20px;
+      margin-bottom: 30px;
+    }
+     .btn-info{
+      border-radius: 0px;
+      width: 550px;
+      font-size:20px;
+      margin-top:20px;
+      margin-bottom: 30px;
+    }
+    #d1{
+      display :none;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $("#register").click(function(){
+        $("#d1").show();
+      });
+      $("#modalc1").click(function(){
+         var aa=$("#phone1").val();
+         alert(" Reset link send to +91"+ aa);
+      });
+    });
+  </script>
+  <body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5">
+      <h1 class="text-center"> Teeka App</h1>
+      <label class="label control-label">Email:</label>
+      <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+        <input type="text" class="form-control" placeholder="Enter your email.." id="cemail">
+      </div>
+      <label class="label control-label">Password</label>
+      <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+        <input type="password" class="form-control" placeholder="Password" id="cpass">
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <input type="checkbox"><small>Remeber me</small>
+        </div>
+        <div class="col-md-6">
+          <a href="#" data-toggle="modal" data-target="#myModal"><p class="text-right">Forget password ?</p></a>
+        </div>
+      </div>
+      <center><a href="#" id="a1"><div class="btn btn-success" id="b1">SIGN IN</div></a></center>
+      <p>Not yet Registered ? <a href="#" style="color:red;" class="text-right" id="register">Register Here</a></p>
+      </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5" id="d1">
+      <h2 class="text-center" style="color:white">Register</h2>
+      <label class="label control-label">Name</label>
+      <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+        <input type="text" class="form-control" placeholder="Enter child's name" id="cname">
+
+      </div>
+      <label class="label control-label">DOB: </label>
+      <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="date" class="form-control" placeholder="Enter Child's DOB" id="dob">
+      </div>
+      <label class="label control-label">Father's name </label>
+      <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+        <input type="text" class="form-control" placeholder="Enter Father's name" id="fname">
+      </div>
+      <label class="label control-label">Email</label>
+      <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+        <input type="text" class="form-control" placeholder="Enter your Email" id="e1">
+      </div>
+      <label class="label control-label">Phone-number</label>
+      <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-inbox"></span></span>
+        <input type="number" class="form-control" placeholder="Phone-number" id="pn">
+      </div>
+
+      <label class="label control-label">Password</label>
+      <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+        <input type="password" class="form-control" placeholder="Password" id="p2">
+      </div>
+      <label class="label control-label">Re-Password</label>
+      <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+        <input type="password" class="form-control" placeholder="Re-type password" id="p3">
+      </div>
+       <center><a id="a4"><span class="btn btn-info" id="b2">Register</span></a></div></center>
+
+      </div>
+    </div>
+  </div>
+   <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Forget password?</h4>
+        </div>
+        <div class="modal-body">
+          <p>Enter the phone number to send a reset link on that !</p>
+          <label class="label control-label">Phone Number</label>
+          <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-inbox" ></span></span>
+          <input type="number" placeholder="Enter phone number to send the reset link" class="form-control" id="phone1" style="color:black;">
+
+        </div>
+        <button class="btn btn-success" id="modalc1">Ok</button>
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css">
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-storage.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDo97GxmdOMIxwxiphN1hBiOiuqdJKoa5c",
+    authDomain: "teeka-app-4e89e.firebaseapp.com",
+    databaseURL: "https://teeka-app-4e89e.firebaseio.com",
+    projectId: "teeka-app-4e89e",
+    storageBucket: "",
+    messagingSenderId: "563212442644",
+    appId: "1:563212442644:web:671def37ca5fe9447c9b01"
+  };
+  // Initialize Firebas
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+var database = firebase.database();
+  $(document).ready(function(){
+  var c=0;
+    $("#a4").click(function(){
+      c=1;
+      var cn=$("#cname").val();
+      var e=$("#e1").val();
+      var p=$("#p2").val();
+      var fn=$("#fname").val();
+      var phn=$("#pn").val();
+  alert(cn+" "+e);
+      firebase.database().ref("authentication").child("user-").set({
+            child: cn,
+            email: e,
+            password: p,
+            father: fn,
+            phone: phn
+   });
+      firebase.auth().createUserWithEmailAndPassword(e, p).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+alert("Succesfully registered");
+         });
+
+ $("#a1").click(function(){
+       var childe=$("#cemail").val();
+      var childp=$("#cpass").val();
+
+
+      firebase.auth().signInWithEmailAndPassword(childe, childp).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+  alert("Sorry no user exists");
+});
+ firebase.auth().onAuthStateChanged(user => {
+  if(user) {
+    window.location = 'user.html'; //After successful login, user will be redirected to home.html
+  }
+});
+      
+ });  
+});
+
+</script>
+
+  </body>
+</html>

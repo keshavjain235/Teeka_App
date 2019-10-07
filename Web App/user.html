@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="angular.min.js"></script>
+<style>
+ body{ background: linear-gradient(to right, #2196f3, #f44336);}
+	.abc{
+		background-color: yellow;
+		border: 1px solid black; 
+	}
+	.abcd{
+		background-color: lightgrey;
+		border: 1px solid black;
+	}
+	#d2,#d3,#d4,#d6{
+		display: none;
+
+	}
+	#comp1,#comp2,#comp3,#comp4,#comp5,#comp6,#comp7,#comp8,#comp9,#comp10,#comp11,#comp12,#comp13,#comp14{
+		display: none;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		$("#l1").click(function(){
+			$("#d1").show();
+			$("#d2").hide();
+			$("#d3").hide();
+			$("#d4").hide();
+			$("#d6").hide();
+		});
+		$("#l2").click(function(){
+			$("#d2").show();
+			$("#d1").hide();
+			$("#d3").hide();
+			$("#d4").hide();
+			$("#d6").hide();
+		});
+		$("#l3").click(function(){
+			$("#d3").show();
+			$("#d1").hide();
+			$("#d2").hide();
+			$("#d4").hide();
+			$("#d6").hide();
+		}); 
+		$("#l4").click(function(){
+			$("#d4").show();
+			$("#d1").hide();
+			$("#d3").hide();
+			$("#d2").hide();
+			$("#d6").hide();
+		});
+			$("#l6").click(function(){
+			$("#d6").show();
+			$("#d1").hide();
+			$("#d3").hide();
+			$("#d2").hide();
+			$("#d4").hide();
+		});
+		$("#update1").click(function(){
+			$("#incomp1").hide();
+			$("#update1").hide();
+			$("#comp1").show();
+			var date=$("#dat1").val();
+			$("#td1").empty().append(date);
+
+		});
+		$("#update2").click(function(){
+			$("#incomp2").hide();
+			$("#update2").hide();
+			$("#comp2").show();
+				var date=$("#dat2").val();
+			$("#td2").empty().append(date);
+
+		});
+		$("#update3").click(function(){
+			$("#incomp3").hide();
+			$("#update3").hide();
+			$("#comp3").show();
+				var date=$("#dat3").val();
+			$("#td3").empty().append(date);
+
+		});
+		$("#update4").click(function(){
+			$("#incomp4").hide();
+			$("#update4").hide();
+			$("#comp4").show();
+				var date=$("#dat4").val();
+			$("#td4").empty().append(date);
+
+		});
+		$("#update5").click(function(){
+			$("#incomp5").hide();
+			$("#update5").hide();
+			$("#comp5").show();
+				var date=$("#dat5").val();
+			$("#td5").empty().append(date);
+
+		});
+		
+
+
+});
+</script>
+</head>
+<body>
+	<b><center><h1>Welcome Ishan!</h1></center></b><br><br>
+		<div class="container-fluid">
+		
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a id="l1" class="navbar-brand" href="#" style="font-size:25px;" >Profile</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#" style="font-size:20px ;" id="l2">Update Vaccination</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:20px ;" id="l3">Vaccination Schedule</a></li>
+<li><a href="#" style="font-size:20px ;" id="l4"><span class="glyphicon glyphicon-map-marker" ></span> Hostpitals near Me </a></li>
+      <li><a href="#" style="font-size:20px ;" id="l6"> Add Event</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="signup.html" style="font-size:20px ;" id="l5"><span class="glyphicon glyphicon-log-in" ></span> Log-Out</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="d2">
+	<table class="table table-hover" id="table1">
+		<tr>
+			<th>Vaccination</th>
+			<th>Completion Date</th>
+			<th>Update</th>
+		</tr>
+				<tr class="row1">
+			<td style="font-weight:  bold;">Hepatitis B</td>
+			<td id="td1"><input type="date" class="form-control" id="dat1"></td>
+			<td><button class="btn btn-warning" id="incomp1">Incomplete</button> <button class="btn btn-primary" id="update1">Update</button> <button class="btn btn-success" id="comp1">Completed</button></td>
+		</tr>
+			<tr>
+			<td style="font-weight:  bold;">Rota Virus</td>
+			<td id="td2"><input type="date" class="form-control" id="dat2"></td>
+			<td><button class="btn btn-warning" id="incomp2">Incomplete</button> <button class="btn btn-primary" id="update2">Update</button> <button class="btn btn-success" id="comp2">Completed</button></td>
+		</tr>
+			<tr>
+			<td style="font-weight:  bold;">Diphtheria, tetanus, & acellular pertussis</td>
+			<td id="td3"><input type="date" class="form-control" id="dat3"></td>
+			<td><button class="btn btn-warning" id="incomp3">Incomplete</button> <button class="btn btn-primary" id="update3">Update</button> <button class="btn btn-success" id="comp3">Completed</button></td>
+		</tr>
+			<tr>
+			<td style="font-weight:  bold;">Haemophilus influenzae type b</td>
+			<td id="td4"><input type="date" class="form-control" id="dat4"></td>
+			<td><button class="btn btn-warning" id="incomp4">Incomplete</button> <button class="btn btn-primary" id="update4">Update</button> <button class="btn btn-success" id="comp4">Completed</button></td></tr>
+
+				<tr>
+			<td style="font-weight:  bold;">Inactivated poliovirus</td>
+			<td id="td5"><input type="date" class="form-control" id="dat5"></td>
+		<td><button class="btn btn-warning" id="incomp5">Incomplete</button> <button class="btn btn-primary" id="update5">Update</button> <button class="btn btn-success" id="comp5">Completed</button></td>
+		</tr>
+				<tr>
+			<td style="font-weight:  bold;">Influenza</td>
+			<td><input type="date" class="form-control"></td>
+			<td><button class="btn btn-warning">Incomplete</button> <button class="btn btn-primary" id="update7">Update</button> <button class="btn btn-success" id="comp7">Completed</button></td>
+		</tr>
+			<tr>
+			<td style="font-weight:  bold;">Measles, mumps, rubella</td>
+			<td><input type="date" class="form-control"></td>
+			<td><button class="btn btn-warning">Incomplete</button> <button class="btn btn-primary" id="update8">Update</button> <button class="btn btn-success" id="comp8">Completed</button></td></tr>
+				<tr>
+			<td style="font-weight:  bold;">Varicella</td>
+			<td><input type="date" class="form-control"></td>
+			<td><button class="btn btn-warning">Incomplete</button> <button class="btn btn-primary" id="update9">Update</button> <button class="btn btn-success" id="comp9">Completed</button></td></tr>
+		
+
+		<tr>
+			<td style="font-weight:  bold;">Hepitits A</td>
+			<td><input type="date" class="form-control"></td>
+			<td><button class="btn btn-warning">Incomplete</button> <button class="btn btn-primary" id="update10">Update</button> <button class="btn btn-success" id="comp10">Completed</button></td></tr>
+			<tr>
+			<td style="font-weight:  bold;">Manigococcal</td>
+			<td><input type="date" class="form-control"></td>
+			<td><button class="btn btn-warning">Incomplete</button> <button class="btn btn-primary" id="update11">Update</button> <button class="btn btn-success" id="comp11">Completed</button></td></tr>
+			<tr>
+			<td style="font-weight:  bold;">Tetanus, diphtheria, & acellular pertussis </td>
+			<td><input type="date" class="form-control"></td>
+			<td><button class="btn btn-warning">Incomplete</button> <button class="btn btn-primary" id="update12">Update</button> <button class="btn btn-success" id="comp12">Completed</button></td></tr>
+			<tr>
+			<td style="font-weight:  bold;">Human papillomavirus</td>
+			<td><input type="date" class="form-control"></td>
+			<td><button class="btn btn-warning">Incomplete</button> <button class="btn btn-primary" id="update13">Update</button> <button class="btn btn-success" id="comp13">Completed</button></td></tr>
+			<tr>
+			<td style="font-weight:  bold;">Menigococcal B </td>
+			<td><input type="date" class="form-control"></td>
+			<td><button class="btn btn-warning">Incomplete</button> <button class="btn btn-primary" id="update14">Update</button> <button class="btn btn-success" id="comp14">Completed
+			</button></td></tr>
+
+
+	</table>
+
+
+</div>
+<div id="d3">
+	<table class="table table-striped">
+		<tr>
+			<th>Vaccine</th>
+			<th>Birth</th>
+			<th>1 mon </th>
+			<th>2 mon </th>
+			<th>3 mon </th>
+			<th>6 mon </th>
+			<th>9 mon </th>
+			<th>12 mon </th>
+			<th>15 mon </th>
+		</tr>
+		<tr>
+			<td>Hepatitis B</td>
+			<td class="abc">1 Dose</td>
+			<td colspan="2" class="abc">2 Dose</td>
+			<td class="abcd"></td>
+			<td colspan="4" class="abc">3 Dose </td>
+
+		</tr>
+				<tr>
+			<td>Rotvirus</td>
+			<td colspan="2" class="abcd"></td>
+			<td class="abc">1 Dose</td>
+			<td class="abc">2 Dose</td>
+			<td class="abc">3 Dose </td>
+			<td class="abcd" colspan="3" ></td>
+
+		</tr>
+				<tr>
+			<td>Diphtheria, tetanus, & acellular pertussis </td>
+			<td colspan="2" class="abcd"></td>
+			<td class="abc">1 Dose</td>
+			<td class="abc">2 Dose</td>
+			<td class="abc">3 Dose </td>
+			<td class="abcd" colspan="2" ></td>
+			<td class="abc">4 Dose </td>
+
+		</tr>
+				<tr>
+			<td>Haemophilus influenzae type b </td>
+			<td colspan="2" class="abcd"></td>
+			<td class="abc">1 Dose</td>
+			<td class="abc">2 Dose</td>
+			<td class="abc">3 Dose </td>
+			<td class="abcd"  ></td>
+			<td class="abc" colspan="2">4 Dose </td>
+
+		</tr>
+				<tr>
+			<td>Pneumococcal conjugate  </td>
+			<td colspan="2" class="abcd"></td>
+			<td class="abc">1 Dose</td>
+			<td class="abc">2 Dose</td>
+			<td class="abc">3 Dose </td>
+			<td class="abcd"  ></td>
+			<td class="abc" colspan="2">4 Dose </td>
+
+		</tr>
+				<tr>
+			<td>Inactivated poliovirus   </td>
+			<td colspan="2" class="abcd"></td>
+			<td class="abc">1 Dose</td>
+			<td class="abc">2 Dose</td>
+			<td class="abc" colspan="4">3 Dose </td>
+
+
+		</tr>
+					<tr>
+			<td>Influenza    </td>
+			<td colspan="4" class="abcd"></td>
+			<td class="abc" colspan="4">Annual Dose 1 or 2 doses </td>
+
+
+		</tr>
+			<tr>
+			<td>Measles, mumps, rubella   </td>
+			<td colspan="5" class="abcd"></td>
+			<td class="abc" colspan="3">1 Dose </td>
+
+
+		</tr>
+			<tr>
+			<td>Varicella   </td>
+			<td colspan="5" class="abcd"></td>
+			<td class="abc" colspan="3">1 Dose </td>
+
+
+		</tr>
+			<tr>
+			<td>Hepatitis A    </td>
+			<td colspan="5" class="abcd"></td>
+			<td class="abc" colspan="4">2 Dose Series</td>
+
+
+		</tr>
+
+	</table>
+	<br><br><br>
+	<center><span style="font-variant: bold; font-size: 20px">For more info visit this link  </span><a href="https://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent.html" style="font-variant: bold; font-size: 20px">Click here !</a></center>
+</div>
+<div id="d4">
+	<center><div class="cointiner-fluid" style="height: 500px;	width: 1000px;"><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d439932.16085536993!2d76.8135946355602!3d30.521887202247672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospital%20!5e0!3m2!1sen!2shk!4v1568998977992!5m2!1sen!2shk" width="1000" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div></center>
+</div>
+<div id="d6">
+	
+<div class="container">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Event name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="email" placeholder="Enter Event name.." name="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Place:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="pwd" placeholder="Place where the Event will take place" name="pwd">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Description:</label>
+      <div class="col-sm-10">          
+        <textarea class="form-control" rows="5" cols="20"></textarea>
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success" id="b10">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+<script>
+	$(document).ready(function(){
+		$("#b10").click(function(){
+		var a=confirm("Are you sure about the details");
+		if(a!=0)
+			alert("Notification sent");
+	});
+	});
+</script>
+
+</div>
+<div id="d1">
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4"><img src="admin.jpg"</div>
+    </div>
+      <div class="col-sm-8">
+      <div class="row">
+      <div class="col-sm-6"> 
+       <span style="font-size:25px">Child name : <b>Ishan Jain</b> </span><br><br>
+       <span style="font-size:25px">DOB : <b>05.07.2019</b> </span><br><br>
+       <span style="font-size:25px">Father's name : <b>Vikram Jain</b> </span><br><br>
+       <span style="font-size:25px">Email : <b>vikram@gmail.com</b> </span><br><br>
+       <span style="font-size:25px">Phone Number :<b>9876543210</b> </span>
+     </div>
+     </div>
+</div>
+    </div>
+  </div>
+</div>
+
+		
+</div>
+</body>
+</html>
